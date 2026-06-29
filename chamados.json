@@ -1,0 +1,26 @@
+[
+    {
+        "nome": "John",
+        "setor": "Financeiro",
+        "categoria": "Hardware",
+        "descricao": "HQ",
+        "prioridade": "Alta",
+        "status": "Concluído"
+    },
+    {
+        "nome": "Alice",
+        "setor": "Comercial",
+        "categoria": "Linux",
+        "descricao": "ITT",
+        "prioridade": "Alta",
+        "status": "Aberto"
+    },
+    {
+        "nome": "Walter",
+        "setor": "Atendimento",
+        "categoria": "Rede / Internet",
+        "descricao": "Qttj 1",
+        "prioridade": "Alta",
+        "status": "Aberto"
+    }
+]

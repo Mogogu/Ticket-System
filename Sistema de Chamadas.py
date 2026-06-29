@@ -1,5 +1,12 @@
 #Menu
-chamados = []
+import json
+import os
+
+if os.path.exists('chamados.json'):
+    with open('chamados.json', 'r') as arquivo:
+        chamados = json.load(arquivo)
+else:
+    chamados = []
 alternativa = 0
 while alternativa != 5:
     print('-' * 60)
@@ -33,28 +40,28 @@ while alternativa != 5:
             setor = int(input('  Setor: '))
             if setor == 1:
                 print(' | Você escolheu o Setor: Financeiro | ')
-                sete = 'Financeiro'
+                nome_setor = 'Financeiro'
             elif setor == 2:
                 print(' | Você escolheu o Setor: RH | ')
-                sete = 'RH'
+                nome_setor = 'RH'
             elif setor == 3:
                 print(' | Você escolheu o Setor: Comercial | ')
-                sete = 'Comercial'
+                nome_setor = 'Comercial'
             elif setor == 4:
                 print(' | Você escolheu o Setor: Marketing | ')
-                sete = 'Marketing'
+                nome_setor = 'Marketing'
             elif setor == 5:
                 print(' | Você escolheu o Setor: Atendimento | ')
-                sete = 'Atendimento'
+                nome_setor = 'Atendimento'
             elif setor == 6:
                 print(' | Você escolheu o Setor: TI | ')
-                sete = 'TI'
+                nome_setor = 'TI'
             elif setor == 7:
                 print(' | Você escolheu o Setor: Logística | ')
-                sete = 'Logística'
+                nome_setor = 'Logística'
             elif setor == 8:
                 print(' | Você escolheu o Setor: Diretoria | ')
-                sete = 'Diretoria'
+                nome_setor = 'Diretoria'
             else:
                 print(' | A Escolha não existe! Escolha dentro das opções para prosseguir. | ')
         print(' Categorias: ')
@@ -73,51 +80,53 @@ while alternativa != 5:
             categoria = int(input('  Categoria: '))
             if categoria == 1:
                 print(' | Você escolheu o Categoria: Hardware | ')
-                categ = 'Hardware'
+                nome_categoria = 'Hardware'
                 prioridade = 'Alta'
             elif categoria == 2:
                 print(' | Você escolheu o Categoria: Windows | ')
-                categ = 'Windows'
+                nome_categoria = 'Windows'
                 prioridade = 'Média'
             elif categoria == 3:
                 print(' | Você escolheu o Categoria: Linux | ')
-                categ = 'Linux'
+                nome_categoria = 'Linux'
                 prioridade = 'Alta'
             elif categoria == 4:
                 print(' | Você escolheu o Categoria: Microsoft Office | ')
-                categ = 'Microsoft Office'
+                nome_categoria = 'Microsoft Office'
                 prioridade = 'Média'
             elif categoria == 5:
                 print(' | Você escolheu o Categoria: Rede / Internet | ')
-                categ = 'Rede / Internet'
+                nome_categoria = 'Rede / Internet'
                 prioridade = 'Alta'
             elif categoria == 6:
                 print(' | Você escolheu o Categoria: Impressora | ')
-                categ = 'Impressora'
+                nome_categoria = 'Impressora'
                 prioridade = 'Baixa'
             elif categoria == 7:
                 print(' | Você escolheu o Categoria: E-mail / Outlook | ')
-                categ = 'E-mail / Outlook'
+                nome_categoria = 'E-mail / Outlook'
                 prioridade = 'Média'
             elif categoria == 8:
                 print(' | Você escolheu o Categoria: Sistema Interno | ')
-                categ = 'Sistema Interno'
+                nome_categoria = 'Sistema Interno'
                 prioridade = 'Média'
             elif categoria == 9:
                 print(' | Você escolheu o Categoria: Senhas | ')
-                categ = 'Senhas'
+                nome_categoria = 'Senhas'
                 prioridade = 'Baixa'
             elif categoria == 10:
                 print(' | Você escolheu o Categoria: Outro | ')
-                categ = 'Outro'
+                nome_categoria = 'Outro'
                 prioridade = 'Baixa'
             else:
                 print(' | A Escolha não existe! Escolha dentro das opções para prosseguir. | ')
         descricao = str(input(' Descrição: '))
         print('-' * 60)
         status = 'Aberto'
-        chamado = {'nome':nome, 'setor':sete, 'categoria':categ, 'descricao':descricao, 'prioridade':prioridade, 'status':status}
+        chamado = {'nome':nome, 'setor':nome_setor, 'categoria':nome_categoria, 'descricao':descricao, 'prioridade':prioridade, 'status':status}
         chamados.append(chamado)
+        with open('chamados.json', 'w') as arquivo:
+            json.dump(chamados, arquivo, indent=4, ensure_ascii=False)
     elif alternativa == 2:
         print(' | Você escolheu a opção [2] - Listar Chamados | ')
         for chamado in chamados:
@@ -142,16 +151,22 @@ while alternativa != 5:
         busca = str(input(' Nome :'))
         for chamado in chamados:
             if busca == chamado['nome']:
-                print('   Escolha um dos estados do chamado:   ')
-                print(' | [1] - Concluído    | ')
-                print(' | [2] - Em andamento | ')
-                altera = int(input(' R: '))
-                if altera == 1:
-                    chamado['status'] = 'Concluído'
-                    print('O novo status do chamado agora é "Concluído"')
-                elif altera == 2:
-                    chamado['status'] = 'Em andamento'
-                    print('O novo status do chamado agora é "Em andamento"')
+                altera = 0
+                while altera != 1 and altera != 2:
+                    print('   Escolha um dos estados do chamado:   ')
+                    print(' | [1] - Concluído    | ')
+                    print(' | [2] - Em andamento | ')
+                    altera = int(input(' R: '))
+                    if altera == 1:
+                        chamado['status'] = 'Concluído'
+                        print('O novo status do chamado agora é "Concluído"')
+                    elif altera == 2:
+                        chamado['status'] = 'Em andamento'
+                        print('O novo status do chamado agora é "Em andamento"')
+                    else:
+                        print(' | A Escolha não existe! Escolha dentro das opções para prosseguir. | ')
+                with open('chamados.json', 'w') as arquivo:
+                    json.dump(chamados, arquivo, indent=4, ensure_ascii=False)
     elif alternativa == 5:
         print('O programa será encerrado!')
     else:
