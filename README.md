@@ -81,6 +81,9 @@ python "Sistema de Chamadas.py"
 ```text
 Help Desk Ticket System/
 │
+├── images/
+│   └── ...
+│
 ├── Sistema de Chamadas.py
 ├── chamados.json
 └── README.md
