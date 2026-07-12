@@ -37,11 +37,7 @@ A Python application that simulates a Help Desk environment, allowing users to c
 
 ![List Tickets](images/list-tickets.png)
 
-### Updating Ticket Status
-
-![Update Status](images/update-status.png)
-
-### Updated Ticket
+### Updating Ticket Status and Updated Ticket
 
 ![Updated Ticket](images/update-and-updated-tickets.png)
 
