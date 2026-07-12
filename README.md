@@ -1,77 +1,115 @@
-# 📌 Sistema de Chamados
+# 📌 Help Desk Ticket System
 
-## 📖 Descrição
-Sistema desenvolvido em Python para simular um ambiente de Help Desk, permitindo registrar, consultar e alterar chamados técnicos.
+## 📖 Description
 
-## 🎯 Objetivo
-- Praticar Python;
--  Praticar estruturas de dados;
--  Simular um sistema utilizado em suporte técnico.
+A Python application that simulates a Help Desk environment, allowing users to create, search, update, and manage technical support tickets.
 
-## ⚙️ Funcionalidades
-- Criar chamado
-- Buscar chamado
-- Listar chamados
-- Alterar status
-- Salvar dados em JSON
-- Carregar dados automaticamente
+## 🎯 Purpose
 
-## 🛠️ Tecnologias utilizadas
+- Practice Python programming
+- Strengthen data structure fundamentals
+- Simulate a real-world Help Desk ticket management system
+
+## ⚙️ Features
+
+- Create tickets
+- Search for tickets
+- List all tickets
+- Update ticket status
+- Save data to JSON
+- Automatically load saved data
+
+## 📸 Screenshots
+
+### Main Menu
+
+![Main Menu](images/menu.png)
+
+### Creating a Ticket
+
+![Create Ticket](images/create-ticket.png)
+
+### Searching for a Ticket
+
+![Search Ticket](images/search-ticket.png)
+
+### Listing Tickets
+
+![List Tickets](images/list-tickets.png)
+
+### Updating Ticket Status
+
+![Update Status](images/update-status.png)
+
+### Updated Ticket
+
+![Updated Ticket](images/update-and-updated-tickets.png)
+
+## 🛠️ Technologies Used
 
 - Python 3
-- Biblioteca padrão `json`
-- Biblioteca padrão `os`
+- Standard library `json`
+- Standard library `os`
 
-## 📚 Conceitos praticados
+## 📚 Concepts Practiced
+
 ### Python
-- Variáveis
-- Condicionais
-- Laços (`for` e `while`)
-- Listas
-- Dicionários
-- Manipulação de arquivos
-- Serialização em JSON
-### Desenvolvimento
-- CRUD
-- Menus interativos
-- Organização de código
-- Persistência de dados
 
-## 🚀 Como executar
-1. Clone o projeto
-2. Abra o terminal
-3. Execute
+- Variables
+- Conditional statements
+- Loops (`for` and `while`)
+- Lists
+- Dictionaries
+- File handling
+- JSON serialization
+
+### Software Development
+
+- CRUD operations
+- Interactive command-line menus
+- Code organization
+- Data persistence
+
+## 🚀 Getting Started
+
+1. Clone this repository.
+2. Open a terminal.
+3. Run the application:
 
 ```bash
 python "Sistema de Chamadas.py"
 ```
 
-## 📂 Estrutura do projeto
+## 📂 Project Structure
 
 ```text
-Sistema de Chamadas/
+Help Desk Ticket System/
 │
 ├── Sistema de Chamadas.py
 ├── chamados.json
 └── README.md
 ```
 
-## 🔮 Melhorias futuras
-- Cadastro de usuários
-- Geração automática de IDs
-- Exclusão de chamados
-- Interface gráfica (Tkinter)
-- Banco de dados SQLite
-- Login de administrador
-- Tratamento de exceções (try/except)
-- Modularização do código
-- Pesquisa por ID
-- Pesquisa por status
-## 👤 Autor
+## 🔮 Future Improvements
+
+- User registration
+- Automatic ticket ID generation
+- Ticket deletion
+- Graphical user interface (Tkinter)
+- SQLite database integration
+- Administrator login
+- Exception handling (`try`/`except`)
+- Code modularization
+- Search by ID
+- Search by status
+
+## 👤 Author
+
 **Guilherme "Mogogu" Gomes**
-- LinkedIn:  https://linkedin.com/in/mogogu-it/
-- GiitHub: https://github.com/Mogogu
 
-## 💡 O que aprendi
+- LinkedIn: https://linkedin.com/in/mogogu-it/
+- GitHub: https://github.com/Mogogu
 
-Durante o desenvolvimento deste projeto pratiquei a criação de menus interativos, manipulação de listas e dicionários, persistência de dados em JSON, busca de informações, alteração de registros e organização de código em Python.
+## 💡 What I Learned
+
+While developing this project, I practiced building interactive command-line menus, working with lists and dictionaries, persisting data using JSON, searching and updating records, and organizing Python code into a maintainable structure.

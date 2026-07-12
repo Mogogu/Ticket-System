@@ -13,13 +13,21 @@
         "categoria": "Linux",
         "descricao": "ITT",
         "prioridade": "Alta",
-        "status": "Aberto"
+        "status": "Concluído"
     },
     {
         "nome": "Walter",
         "setor": "Atendimento",
         "categoria": "Rede / Internet",
         "descricao": "Qttj 1",
+        "prioridade": "Alta",
+        "status": "Aberto"
+    },
+    {
+        "nome": " John",
+        "setor": "Financeiro",
+        "categoria": "Hardware",
+        "descricao": "HQ",
         "prioridade": "Alta",
         "status": "Aberto"
     }
